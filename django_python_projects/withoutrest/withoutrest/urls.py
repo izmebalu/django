@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.without_rest),
     path('api/', views.without_rest_json),
-    path('apijson2/', views.without_rest_json2),    
+    path('apijson2/', views.without_rest_json2), 
+    path('apicbv/', views.JsonCBV.as_view()),    
 ]

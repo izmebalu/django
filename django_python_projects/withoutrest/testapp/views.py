@@ -16,11 +16,11 @@ def without_rest(request):
 import json
 def without_rest_json(request):
     emp_view={
-        'name': 'bharath',
-        'age': 29,
-        'domain': 'Devops',
-        'sal': 250000,
-        'addr': 'hyderabad'
+        'name': 'Srija',
+        'age': 24,
+        'domain': 'AWS',
+        'sal': 650000,
+        'addr': 'Nigeria'
     }
 
     json_data = json.dumps(emp_view)
@@ -37,3 +37,16 @@ def without_rest_json2(request):
     }
 
     return JsonResponse(emp_view)
+
+from django.views.generic import View
+class JsonCBV(View):
+    def get(self,request,*args, **kwargs):
+        emp_data = {
+            'name': 'bharath',
+            'age': 29,
+            'domain': 'SDE',
+            'sal': 4500000,
+            'addr': 'Pune'
+        }
+        return JsonResponse(emp_data)
+
